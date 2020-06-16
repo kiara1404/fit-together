@@ -6,6 +6,8 @@
     background-color: efefef;
 }
 
+/* ❤️ De header ❤️ */
+
 header {
     background-color: #3c91e6;
     height: 7.5vh;
@@ -56,12 +58,14 @@ header {
     box-shadow: 13px 11px 47px 0px rgba(112,112,112,1);
 }
 
+/* ❤️ Gebruikers ❤️ */
+
 .gf_person_img {
-    width: 300px; 
+    width: 300px;
     display: block;
     margin: 0 auto;
     padding-top: 20px;
-    
+
 }
 .gf_person{
     list-style-type: none;
@@ -119,4 +123,13 @@ header {
 .gt_btn_secondary:hover{
     background-color: #f0f9ff;
     transition: 0.5s ease-in;
+}
+
+.profile_information{
+
+}
+
+.profile_picture{
+
+  
 }
