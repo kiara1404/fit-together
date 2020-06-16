@@ -1,0 +1,31 @@
+{
+  "name": "dating_app",
+  "version": "1.0.0",
+  "description": "this is for the assignment of project tech.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "array-find": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.8",
+    "multer": "^1.4.2",
+    "slug": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiara1404/dating_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kiara1404/dating_app/issues"
+  },
+  "homepage": "https://github.com/kiara1404/dating_app#readme"
+}

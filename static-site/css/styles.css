@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway' , sans-serif;
+    background-color: efefef;
+}
+
+header {
+    background-color: #3c91e6;
+    height: 7.5vh;
+}
+
+.gf_banner{
+    width: 300px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+.gf_banner img {
+    width: 4vw;
+    min-width: 40px;
+    max-width: 50px;
+    float: left;
+    margin: 10px 10px 0px 20px;
+
+}
+
+.gf_banner li:nth-child(2){
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+    width: auto;
+    margin: 0px 0px 10px 5px;
+    font-size: 1.5em;
+    font-weight: 200;
+    padding-top: 15px;
+}
+.gf_heading{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 32px;
+    color: #353535;
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+.gf_wrapper{
+    width: 20vw;
+    min-width: 320px;
+    height: 70vh;
+    min-height: 570px;
+    margin: 0 auto;
+    box-shadow: grey 10px;
+    border-radius: 25px;;
+    box-shadow: 13px 11px 47px 0px rgba(112,112,112,1);
+}
+
+.gf_person_img {
+    width: 300px; 
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    
+}
+.gf_person{
+    list-style-type: none;
+}
+
+.gf_person h3{
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    color: #3c91e6;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+}
+.gf_person_age, .gf_person_place{
+    font-size: 16px;
+    width: 80%;
+    padding: 5px 0 0 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gf_person_bio{
+    width: 80%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.gt_btn_primary{
+    background-color: #83c5ee;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    margin: 50px 20px 0px 20px;
+    text-align: center;
+}
+.gt_btn_primary:hover{
+    background-color: #aedefc;
+    transition: 0.5s ease-in;
+}
+.gt_btn_secondary{
+    background-color: #ffffff;
+    border: 2px solid #83c5ee;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #83c5ee;
+    font-weight: 600;
+    display: block;
+    margin: 10px 20px;
+    text-align: center;
+}
+.gt_btn_secondary:hover{
+    background-color: #f0f9ff;
+    transition: 0.5s ease-in;
+}

@@ -1,0 +1,12 @@
+
+<%- include('header'); -%>
+<main>
+  <h1>people</h1>
+  <% for (var index = 0; index < data.length; index++) { %>
+    <a href="/<%= data[index]._id %>"<h3>
+      <%= data[index].name%>
+    </h3></a>
+    <p><%= data[index].age %></p>
+    <p><%= data[index].bio %></p>
+  <% } %>
+</main>
