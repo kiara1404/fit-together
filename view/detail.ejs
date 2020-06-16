@@ -14,11 +14,20 @@
                 <p class="gf_person_place"><%= data.place %></p>
             </li>
             <li>
-                <img src="img/man.jpeg" alt="" class="gf_person_img"></li>
+                <img src="/img/man.jpeg" alt="">
+            </li>
             <li>
-                <p class="gf_person_bio"><%= data.bio %></p>
+                <h4 class="gf_person_bio">Type of training:</h4>
+                <p class="gf_person_bio"><%= data.training %></p>
+            </li>
+            <li>
+                <h4 class="gf_person_bio">Level of training:</h4>
+                <p class="gf_person_bio"><%= data.level %></p>
             </li>
         </ul>
+        <button class="gf_btn_primary"   id="remove" data-id="<%= data._id %>">Delete profile</button>
         
 
     </article>
+
+    <%- include('footer'); -%>

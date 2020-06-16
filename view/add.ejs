@@ -1,15 +1,36 @@
 <%- include('header') %>
 <h1>Join our community!</h1>
 <section class="gf_wrapper">
-    <form method="POST" action="/" enctype="multipart/form-data">
-        <label for="name">Name</label>
-        <input name="name" type="text">
-        <label for="age">Age</label>
-        <input name="age" type="number">
-        <label for="place">Place of residence</label>
-        <input name="place" type="text">
-        <label for="bio">What is your current fitness level?</label>
-        <textarea name="bio" type="textarea" rows="5"></textarea>
-        <input type="submit" value="Join">
+    <form method="POST" action="/">
+        <fieldset class="gf_form_personal">
+            <label for="name">Name</label>
+            <input name="name" type="text">
+            <label for="age">Age</label>
+            <input name="age" type="number">
+            <label for="place">Place of residence</label>
+            <input name="place" type="text">
+            <label for="email">Email address</label>
+            <input name="email" type="email">
+            <label for="password">Password</label>
+            <input name="password" type="password">
+         </fieldset>
+         <fieldset class="gf_form_training">
+            <label for="training">What type of training do you do?</label>
+            <input name="training" type="text">
+            <p>Please select your training level</p>
+            <div>
+                <input name="level" type="radio" value="beginner" id="beginner" checked>
+                <label for="beginner">Beginner</label>
+            </div>
+            <div>
+                <input name="level" type="radio" value="Intermediate" id="intermediate">
+                <label for="intermediate">Intermediate</label>
+            </div>
+            <div>
+                <input name="level" type="radio" value="advanced" id="advanced">
+                <label for="advanced">Advanced</label>
+        </div>
+       </fieldset>
+       <input type="submit" value="Join">
     </form>
 </section>

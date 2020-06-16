@@ -3,10 +3,7 @@ const app = express();
 const port = 8000;
 const find = require('array-find');
 const bodyParser = require("body-parser"); 
-const slug = require("slug");
 const mongo = require('mongodb')
-const multer  = require('multer')
-const upload = multer({ dest: 'uploads/' })
 
 require('dotenv').config();
 
@@ -26,6 +23,7 @@ mongo.MongoClient.connect(url,
 }
 );
 
+
 //set templating engine 
 app.set('view engine', 'ejs');
 // where are the templates stored
@@ -39,6 +37,7 @@ app.use(express.static('public'));
 app.post('/', add)
 app.get('/add', form)
 app.get('/:id', person)
+app.delete('/:id', remove)
 app.listen(port, function(){
     console.log('The  server is running')
 });
@@ -49,7 +48,7 @@ res.render('index');
 }
 
 function people(req, res){
-  db.collection('getfit').find().toArray(done)
+  db.collection('users').find().toArray(done)
 
   function done(err, data) {
     if(err){
@@ -68,12 +67,16 @@ function form(req, res) {
    res.render('add');
 }
 
+
 function add(req,res,next){
-    db.collection("getfit").insertOne({
+    db.collection("users").insertOne({
     name: req.body.name,
     age: req.body.age,
     place: req.body.place,
-    bio: req.body.bio
+    email: req.body.email,
+    password: req.body.password,
+    training: req.body.training,
+    level: req.body.level
     }, done)
 
     function done(err, data) {
@@ -90,7 +93,7 @@ function add(req,res,next){
 
 function person(req,res, next){
   let id = req.params.id;
-  db.collection("getfit").findOne({
+  db.collection("users").findOne({
     _id: new mongo.ObjectID(id),
   }, done);
 
@@ -104,4 +107,18 @@ function person(req,res, next){
 }
 }
 
+function remove(req, res, next){
+  var id = req.params.id
 
+  db.collection("users").deleteOne({
+    _id: new mongo.ObjectID(id)
+  }, done)
+
+  function done(err) {
+    if (err) {
+      next(err)
+    } else {
+      res.json({status: 'ok'})
+    }
+}
+}

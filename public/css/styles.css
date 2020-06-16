@@ -54,7 +54,7 @@ main{
 .gf_wrapper{
     width: 20vw;
     min-width: 320px;
-    height: 70vh;
+    height: 75vh;
     min-height: 570px;
     margin: 0 auto;
     box-shadow: grey 10px;
@@ -71,6 +71,19 @@ main{
 }
 .gf_person{
     list-style-type: none;
+    margin: 0 auto;
+}
+
+.gf_person ul{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.gf_person img{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
 }
 
 .gf_person h3, h3{
@@ -105,6 +118,7 @@ main{
     display: block;
     margin: 50px 20px 0px 20px;
     text-align: center;
+    border: none;
 }
 .gf_btn_primary:hover{
     background-color: #aedefc;
@@ -139,9 +153,14 @@ form{
     width: 80%;
     display: block;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 10px;
 }
-
+form fieldset{
+    border: none;
+}
+form fieldset p{
+    margin: 0;
+}
 form label{
     display: block;
     padding: 20px 0 3px 0;
@@ -154,6 +173,17 @@ form input{
 
 form textarea{
     width: 100%;
+}
+.gf_form_training input[type="radio"]{
+    width: 20px;
+    display: inline-block;
+    margin-top: 5px;
+
+
+}
+.gf_form_training label{
+    display: inline-block;
+
 }
 
 form input[type="submit"]{
