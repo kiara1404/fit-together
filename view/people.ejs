@@ -3,10 +3,17 @@
 <main>
   <h1>people</h1>
   <% for (var index = 0; index < data.length; index++) { %>
-    <a href="/<%= data[index]._id %>"<h3>
+    <a href="/<%= data[index]._id %>"></a><h3>
       <%= data[index].name%>
     </h3></a>
     <p><%= data[index].age %></p>
-    <p><%= data[index].bio %></p>
+    <p><%= data[index].place %></p>
+    <p><%= data[index].training %></p>
+    <p><%= data[index].level %></p>
   <% } %>
 </main>
+
+
+
+
+    <%- include('footer'); -%>
