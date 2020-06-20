@@ -10,6 +10,8 @@ body{
 header {
     background-color: #3c91e6;
     height: 7.5vh;
+    display: flex;
+    justify-content: flex-end;
 }
 main{
     width: 80vw;
@@ -19,21 +21,27 @@ main{
 
 .gf_banner{
     width: 300px;
-    margin: 0 auto;
-    list-style-type: none;
+    list-style-type: none; 
+    margin-right: auto;
+    margin-top: 5px;
+
+
+    
+
+
 }
 .gf_banner img {
     width: 4vw;
     min-width: 40px;
     max-width: 50px;
-    float: left;
     margin: 10px 10px 0px 20px;
+    float: left;
+
 
 }
 
 .gf_banner li:nth-child(2){
     font-family: 'Raleway', sans-serif;
-    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #ffffff;
@@ -42,6 +50,8 @@ main{
     font-size: 1.5em;
     font-weight: 200;
     padding-top: 15px;
+    display: inline-block;
+
 }
 .gf_heading{
     width: 300px;
@@ -54,7 +64,7 @@ main{
 .gf_wrapper{
     width: 20vw;
     min-width: 320px;
-    height: 75vh;
+    height: auto;
     min-height: 570px;
     margin: 0 auto;
     box-shadow: grey 10px;
@@ -199,4 +209,34 @@ form input[type="submit"]{
     height: 35px;
     border-style: none;
     margin-top: 20px;
+}
+.gf_login{
+    text-decoration: none;
+    color: #fff;
+    border:  1px solid #fff; 
+    padding: 13px;
+    font-size: 1em;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin: 15px 5px 10px 10px;
+}
+.gf_register {
+    text-decoration: none;
+    color: #3c91e6;
+    background-color: #fff; 
+    padding: 13px;
+    font-size: 1em;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin: 15px 5px 10px 10px;
+}
+.gf_signup{
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    
 }
