@@ -9,11 +9,45 @@
     </ul>
     <div class="gf_signup">
         <a href="/people" class="gf_login">Search</a>
-        <a href="/" class="gf_register">Log out</a>
+        <form method="POST" action="/logout"><input class="gf_logout"  value="Logout" type="submit"></form>
+ 
     </div>
     
 </header>
 <main>
+    <h1>Welcome <%= data.name %></h1>
+    <p class="gf_subheading">Here you can see your own profile. </p>
+    <article class="gf_wrapper">
+        <ul class="gf_person">
+            <li>
+                <h3 class="gf_person_name"><%= data.name %></h3>
+            </li>
+            <li>
+                <p class="gf_person_age"><%= data.age %></p>
+            </li>
+            <li>
+                <p class="gf_person_place"><%= data.place %></p>
+            </li>
+            <li>
+                <img src="/img/workout-buddies.jpeg" alt="">
+            </li>
+            <li>
+                <h4 class="gf_person_bio">Type of training:</h4>
+                <p class="gf_person_bio"><%= data.training %></p>
+            </li>
+            <li>
+                <h4 class="gf_person_bio">Level of training:</h4>
+                <p class="gf_person_bio"><%= data.level %></p>
+            </li>
+        </ul>
+        <div class="gf_btn">
+            <button class="gf_btn_secondary"   id="remove" data-id="<%= data._id %>">Delete profile</button>
+            <a class="gf_btn_edit"   href="/update">Edit profile</a>
+        </div>
+        
 
+    </article>
+
+   
     
 </main>

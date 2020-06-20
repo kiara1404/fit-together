@@ -8,7 +8,7 @@
       </a>
   </ul>
   <div class="gf_signup">
-      <a href="/" class="gf_login">Logout</a>
+    <form method="POST" action="/logout" class="gf_logout"><input class="gf_logout"  value="Logout" type="submit"></form>
  
   </div>
   
@@ -32,7 +32,13 @@
         <h4>Type of training:</h4>
         <p><%= data[index].training %></p>
         <h4>Level of training:</h4>
-      <p><%= data[index].level %></p>
+        <p><%= data[index].level %></p>
+
+        <% if(data[index].search){%>
+          <h4>Who I'm looking for</h4>
+          <p><%= data[index].search %></p>
+        <% }%>
+        
     </article>
     </article>
     <% } %>

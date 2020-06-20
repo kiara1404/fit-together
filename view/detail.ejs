@@ -8,7 +8,8 @@
         </a>
     </ul>
     <div class="gf_signup">
-        <a href="/login" class="gf_login">Log out</a>
+        <form method="POST" action="/logout" class="gf_logout"><input class="gf_logout"  value="Logout" type="submit"></form>
+ 
 
     </div>
     
@@ -39,7 +40,6 @@
                 <p class="gf_person_bio"><%= data.level %></p>
             </li>
         </ul>
-        <button class="gf_btn_primary"   id="remove" data-id="<%= data._id %>">Delete profile</button>
         
 
     </article>

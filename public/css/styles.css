@@ -183,9 +183,10 @@ main{
     text-decoration: none;
     color: #83c5ee;
     font-weight: 600;
-    display: block;
-    margin: 10px 20px;
+    display: inline-block;;
     text-align: center;
+    width: 130px;
+    margin-bottom: 20px;
 }
 .gf_btn_secondary:hover{
     background-color: #f0f9ff;
@@ -197,7 +198,7 @@ h1{
     display: block;
     margin: 0 auto;
     text-align: center;
-    padding: 20px 0 40px;
+    padding: 20px 0 10px;
 }
 
 form{
@@ -275,9 +276,56 @@ form input[type="submit"]{
     border-radius: 15px;
     margin: 15px 5px 10px 10px;
 }
+ form .gf_logout[type="submit"] {
+    text-decoration: none;
+    color: #fff;
+    width: 110px;
+    height: 45px;
+    border:  1px solid #fff; 
+    background-color: #3c91e6;
+    padding: -20px 10px 10px 10px;
+    font-size: 1em;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin: 5px 5px 10px 10px;
+    text-align: center;
+}
+
 .gf_signup{
     width: 400px;
     display: flex;
     justify-content: flex-end;
     
+}
+.gf_btn{
+    width: 85%;
+    display: block;
+    margin: 30px auto;
+}
+
+.gf_btn_edit{
+    width: 130px;
+    background-color: #83c5ee;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    margin-bottom: 20px;
+}
+.gf_subheading{
+    width: 270px;
+    display: block;
+    margin: 10px auto;
+    padding: 0 0 40px 0; 
+}
+
+.gf_signup form{
+    margin: 0;
+    width: auto;
 }

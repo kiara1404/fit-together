@@ -4,6 +4,7 @@ const port = 8000;
 const find = require('array-find');
 const bodyParser = require("body-parser"); 
 const mongo = require('mongodb');
+const objectId = require('mongodb').ObjectID;
 const session = require('express-session');
 
 require('dotenv').config();
@@ -47,13 +48,16 @@ app.use(express.static('public'));
 app.post('/', add)
 app.post('/dashboard', login)
 app.post('/logout', logout)
+app.post('/people', update)
 
 app.get('/', index);
 app.get('/people', people)
 app.get('/dashboard', dashboard)
 app.get('/add', form)
 app.get('/login', loginForm)
+app.get('/update', updatePage)
 app.get('/:id', person)
+
 
 app.delete('/:id', remove)
 app.listen(port, function(){
@@ -64,6 +68,12 @@ app.listen(port, function(){
 function index(req, res) {
 res.render('index');
 }
+
+  function updatePage(req, res) {
+        res.render('update');
+        
+      }
+
 
 // only available when the user has a session, otherwise redirect to home
 function dashboard(req, res) {
@@ -81,9 +91,13 @@ function loginForm(req, res) {
   res.render('login');
   }
 
-  // list with all users
+  // list with all users from the database
 function people(req, res){
   db.collection('users').find().toArray(done)
+
+  if (!req.session.user) {
+    res.redirect("/login");
+  }
 
   function done(err, data) {
     if(err){
@@ -136,7 +150,7 @@ function person(req,res, next){
     if(err) {
         next(err)
     } else {
-        res.render('detail.ejs', {data:data});
+        res.render('detail', {data:data});
         console.log('person found succesfully')
       }
     }
@@ -161,13 +175,11 @@ function remove(req, res, next){
 
     // login with session
 function login(req, res, next) {
-  let person = req.body.name
+  let name = req.body.name
 
   db.collection("users").findOne({
-       profileId: person
-    },
-    done
-  );
+    objectId: name
+    }, done);
 
   function done(err, data) {
     if (err) {
@@ -175,7 +187,7 @@ function login(req, res, next) {
     } 
     else{
     req.session.user = {user: data}
-      res.redirect('dashboard');
+      res.render('dashboard', {data: data});
     }
   }
 }
@@ -189,6 +201,23 @@ function logout(req, res, next) {
       res.redirect('/')
     }
   })
+}
+
+function update(req,res, next){
+    let item = {
+      search: req.body.partner
+    }
+    let id = req.body._id;
+    db.collection('users').updateOne({'_id': objectId('5eed181c28c0454250bdc2bf')}, {$set: item}, 
+    function done(err, data) {
+      if(err) {
+          next(err)
+      } else {
+          res.render('people', {data:data}) // route to new profile
+          console.log('profile updated succesfully', req.body._id)
+      }
+    })
+
 }
 
 
