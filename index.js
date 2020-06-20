@@ -36,6 +36,7 @@ app.use(express.static('public'));
 //app.use(notFound);
 app.post('/', add)
 app.get('/add', form)
+app.get('/login', login)
 app.get('/:id', person)
 app.delete('/:id', remove)
 app.listen(port, function(){
@@ -46,6 +47,10 @@ app.listen(port, function(){
 function index(req, res) {
 res.render('index');
 }
+
+function login(req, res) {
+  res.render('login');
+  }
 
 function people(req, res){
   db.collection('users').find().toArray(done)
