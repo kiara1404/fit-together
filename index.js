@@ -10,7 +10,7 @@ require('dotenv').config();
 
 //database connect
 let db = null;
-var url = 'mongodb+srv://' + process.env.DB_HOST;
+let url = 'mongodb+srv://' + process.env.DB_HOST;
 
 mongo.MongoClient.connect(url, 
     { useUnifiedTopology: true, },
@@ -42,7 +42,7 @@ app.use(session({
 }))
 
 app.use(express.static('public'));
-app.use(notFound);
+//app.use(notFound);
 
 app.post('/', add)
 app.post('/dashboard', login)
