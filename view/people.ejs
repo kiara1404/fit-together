@@ -1,16 +1,43 @@
 <%- include('head') -%>
-<%- include('header'); -%>
+<header>
+       
+  <a href="/">
+      <ul class="gf_banner">
+      <li><img src="img/da_logo_wit.png"></li>
+      <li>Fit together</li>
+      </a>
+  </ul>
+  <div class="gf_signup">
+      <a href="/" class="gf_login">Logout</a>
+ 
+  </div>
+  
+</header>
 <main>
-  <h1>people</h1>
+  <h1>Check all these people out!</h1>
+  <section class="gf_wrapper-m">
   <% for (var index = 0; index < data.length; index++) { %>
-    <a href="/<%= data[index]._id %>"></a><h3>
-      <%= data[index].name%>
-    </h3></a>
-    <p><%= data[index].age %></p>
-    <p><%= data[index].place %></p>
-    <p><%= data[index].training %></p>
-    <p><%= data[index].level %></p>
-  <% } %>
+    <article class="gf_wrapper-s">
+      <a href="/<%= data[index]._id %>">
+        <h3>
+        <%= data[index].name%>
+       </h3>
+      </a>
+      <img src="img/workout-buddies.jpeg">
+      <article class="gf_wrapper-xs">
+        <h4>Age:</h4>
+        <p><%= data[index].age %></p>
+        <h4>From:</h4>
+        <p><%= data[index].place %></p>
+        <h4>Type of training:</h4>
+        <p><%= data[index].training %></p>
+        <h4>Level of training:</h4>
+      <p><%= data[index].level %></p>
+    </article>
+    </article>
+    <% } %>
+     
+  </section>
 </main>
 
 
