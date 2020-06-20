@@ -1,0 +1,26 @@
+<%- include('head') %>
+<header>
+       
+    <a href="/">
+        <ul class="gf_banner">
+        <li><img src="img/da_logo_wit.png"></li>
+        <li>Fit together</li>
+        </a>
+    </ul>
+    <div class="gf_signup">
+        <a href="/add" class="gf_register">Register</a>
+    </div>
+    
+</header>
+<h1>Log in</h1>
+<section class="gf_wrapper">
+    <form method="POST" action="/dashboard">
+        <fieldset class="gf_form_personal">
+            <label for="email" >Email address</label>
+            <input name="email" type="email" required>
+            <label for="password" >Password</label>
+            <input name="password" type="password" required>
+        </fieldset>
+    <input type="submit" value="Login">
+    </form>
+    </section>

@@ -1,4 +1,18 @@
-<%- include('header'); -%>
+<%- include('head') -%>
+<header>
+       
+    <a href="/">
+        <ul class="gf_banner">
+        <li><img src="img/da_logo_wit.png"></li>
+        <li>Fit together</li>
+        </a>
+    </ul>
+    <div class="gf_signup">
+        <a href="/login" class="gf_login">Log out</a>
+
+    </div>
+    
+</header>
 
 
     <h2 class="gf_heading">Welcome to <%= data.name %>'s profile! </h2>
@@ -14,7 +28,7 @@
                 <p class="gf_person_place"><%= data.place %></p>
             </li>
             <li>
-                <img src="/img/man.jpeg" alt="">
+                <img src="/img/workout-buddies.jpeg" alt="">
             </li>
             <li>
                 <h4 class="gf_person_bio">Type of training:</h4>
