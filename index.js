@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const port = 8000;
 const find = require('array-find');
+
 const bodyParser = require("body-parser"); 
 const mongo = require('mongodb');
 const session = require('express-session');
+
 
 require('dotenv').config();
 
@@ -12,7 +14,7 @@ require('dotenv').config();
 let db = null;
 let url = 'mongodb+srv://' + process.env.DB_HOST;
 
-mongo.MongoClient.connect(url, 
+mongo.MongoClient.connect(url,
     { useUnifiedTopology: true, },
     function (err, client) {
     if (err){
@@ -25,7 +27,7 @@ mongo.MongoClient.connect(url,
 );
 
 
-//set templating engine 
+//set templating engine
 app.set('view engine', 'ejs');
 // where are the templates stored
 app.set('views', 'view');
@@ -93,7 +95,15 @@ function people(req, res){
       }
     }
 }
+n
+
+function profile(req, res){
+res.render('profile');
+}
+
+
 // not found redirect
+
 function notFound (req, res) {
     res.status(404).redirect('/404')
   }
