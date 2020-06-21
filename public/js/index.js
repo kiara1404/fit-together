@@ -22,7 +22,7 @@ function onresponse(res) {
   }
 
   function onload() {
-    window.location = '/'
+    window.location = '/people'
   }
 
   function onfail() {
