@@ -1,5 +1,20 @@
 <%- include('head') -%>
-<%- include('header'); -%>
+<header>
+       
+  <a href="/">
+      <ul class="gf_banner">
+      <li><img src="img/da_logo_wit.png"></li>
+      <li>Fit together</li>
+      </a>
+  </ul>
+  <div class="gf_signup">
+      <a href="/people" class="gf_login">search</a>
+      <form method="POST" action="/logout" class="gf_logout"><input class="gf_logout"  value="Logout" type="submit"></form>
+ 
+  </div>
+  
+</header>
+
 <main>
   <section class = "profile_picture"> <!-- profiel foto('s) met daarover tekst. -->
     <img src="" alt="Profile picture of: "

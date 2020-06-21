@@ -1,0 +1,28 @@
+<%- include('head') -%>
+<header>
+       
+    <a href="/">
+        <ul class="gf_banner">
+        <li><img src="img/da_logo_wit.png"></li>
+        <li>Fit together</li>
+        </a>
+    </ul>
+    <div class="gf_signup">
+        <form method="POST" action="/logout" class="gf_logout"><input class="gf_logout"  value="Logout" type="submit"></form>
+ 
+
+    </div>
+    
+</header>
+
+<h1>Update your profile</h1>
+<section class="gf_wrapper">
+    <form method="POST" action="/people">
+        <label for="id">ID</label>
+        <input for="id" name="id">
+        <label for="partner">Who are you looking for?</label>
+        <textarea name="partner"></textarea>
+
+       <input type="submit" value="Update profile">
+    </form>
+</section>
