@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const port = proces.env.PORT;
 const find = require('array-find');
 const bodyParser = require("body-parser"); 
 const mongo = require('mongodb');
